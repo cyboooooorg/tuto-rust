@@ -24,8 +24,6 @@ fn game() -> bool {
     let max_attempts: i32 = 10;
     let mut attempts: i32 = 0;
 
-    println!("The secret number is: {}", secret_number);
-
     loop {
         print!("Please input your guess: ");
         std::io::stdout().flush().unwrap();
@@ -48,6 +46,7 @@ fn game() -> bool {
 
         if attempts >= max_attempts {
             println!("You lose!");
+            println!("The secret number was: {}", secret_number);
             break;
         }
     }
